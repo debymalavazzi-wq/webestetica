@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dra. Débora Malavazzi | Clínica Estética – Ipiranga, SP</title>
+<meta name="description" content="Clínica estética com atendimento humanizado. Especialista em harmonização corporal, lipedema e microvasos. Ipiranga, São Paulo."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F9F5F0;
+    --gold: #C8A97E;
+    --gold-dark: #A8845A;
+    --dark: #2C2622;
+    --text: #3D3530;
+    --muted: #8A7F78;
+    --border: rgba(200,169,126,0.25);
+    --white: #FFFFFF;
+    --radius: 12px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAVIGATION ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 68px;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--dark);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--gold-dark); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--text);
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 90vh;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    padding: 80px 60px 80px 80px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+    font-weight: 500;
+    line-height: 1.18;
+    color: var(--dark);
+    margin-bottom: 20px;
+  }
+
+  .hero-title em { font-style: italic; color: var(--gold); }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--muted);
+    max-width: 400px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+
+  .btn-outline:hover { background: rgba(200,169,126,0.08); }
+
+  .hero-image {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: brightness(0.95);
+  }
+
+  .hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--cream) 0%, transparent 18%);
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 90px 80px; }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+    font-weight: 500;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--muted);
+    max-width: 500px;
+    margin-bottom: 48px;
+  }
+
+  /* ── TRATAMENTOS ── */
+  #tratamentos { background: var(--white); }
+
+  .treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+
+  .treatment-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+    background: var(--white);
+    padding: 28px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .treatment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(200,169,126,0.15);
+  }
+
+  .treatment-icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: rgba(200,169,126,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .treatment-icon-wrap svg {
+    width: 36px;
+    height: 36px;
+    stroke: var(--gold-dark);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .treatment-body { display: flex; flex-direction: column; gap: 6px; }
+
+  .treatment-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .treatment-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── SOBRE ── */
+  #sobre {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .sobre-image {
+    position: relative;
+  }
+
+  .sobre-image img {
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 3/4;
+    max-height: 560px;
+    background: #ddd;
+  }
+
+  .sobre-image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    max-height: 560px;
+    border-radius: var(--radius);
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+  }
+
+  .sobre-badge {
+    position: absolute;
+    bottom: 28px;
+    right: -20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+
+  .sobre-badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .sobre-badge-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .sobre-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .stat-item {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ── DEPOIMENTOS ── */
+  #depoimentos { background: var(--white); text-align: center; }
+
+  #depoimentos .section-sub { margin-left: auto; margin-right: auto; }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    text-align: left;
+  }
+
+  .testimonial-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    position: relative;
+  }
+
+  .testimonial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    line-height: 0.8;
+    margin-bottom: 12px;
+  }
+
+  .testimonial-text {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .testimonial-stars {
+    color: var(--gold);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial-author {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .google-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 20px;
+    margin-top: 40px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .google-badge:hover { border-color: var(--gold); }
+
+  .google-badge .rating { font-weight: 500; color: var(--dark); }
+
+  /* ── REDES SOCIAIS ── */
+  #redes {
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .social-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .social-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(200,169,126,0.15);
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .social-icon.ig { background: #F9F5F0; color: #E4405F; }
+  .social-icon.fb { background: #F0F4FF; color: #1877F2; }
+  .social-icon.tk { background: #F0F0F0; color: #111; }
+  .social-icon.wa { background: #F0FDF4; color: #25D366; }
+
+  .social-info { text-align: left; }
+
+  .social-platform {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .social-handle {
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: var(--dark);
+  }
+
+  /* ── LOCALIZAÇÃO ── */
+  #localizacao { background: var(--white); }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .map-embed {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    height: 380px;
+  }
+
+  .map-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .contact-box {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+    background: var(--cream);
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-item:last-of-type { border-bottom: none; }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(200,169,126,0.12);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+
+  .contact-value {
+    font-size: 0.88rem;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+
+  .contact-value a { color: var(--dark); text-decoration: none; }
+
+  .cta-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    margin-top: 24px;
+    transition: background 0.2s;
+  }
+
+  .cta-whatsapp:hover { background: #1ebc58; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 40px 80px;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .footer-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy { font-size: 0.75rem; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    section { padding: 60px 24px; }
+
+    nav { padding: 0 24px; }
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+
+    #hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-content { padding: 60px 24px 40px; }
+    .hero-image { height: 50vw; min-height: 260px; }
+
+    #sobre { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+    .sobre-badge { right: 10px; }
+
+    .location-grid { grid-template-columns: 1fr; }
+
+    .footer-links { gap: 16px; }
+    footer { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Dra. Débora <span>Malavazzi</span></a>
+  <ul class="nav-links">
+    <li><a href="#tratamentos">Tratamentos</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#redes">Redes</a></li>
+    <li><a href="#localizacao">Localização</a></li>
+  </ul>
+  <a href="https://wa.me/5511912105115" target="_blank" rel="noopener" class="nav-cta">
+    ✉ Agendar consulta
+  </a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Clínica Estética · Ipiranga, São Paulo</p>
+    <h1 class="hero-title">
+      O cuidado estético que<br>
+      transforma <em>de dentro</em><br>
+      para fora
+    </h1>
+    <p class="hero-sub">
+      Mais do que resultados visíveis, ofereço acolhimento, confiança e naturalidade em cada detalhe. Especialista em harmonização corporal com ênfase em microvasos.
+    </p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5511912105115" target="_blank" rel="noopener" class="btn-primary">
+        Agendar no WhatsApp →
+      </a>
+      <a href="#tratamentos" class="btn-outline">Ver tratamentos</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <!--
+      SUBSTITUA o src abaixo pela foto da Dra. Débora.
+      Exemplo: src="imagens/dra-debora.jpg"
+    -->
+    <img
+      src="https://dradeboramalavazzi.wixsite.com/dradeboramalavazzi/_next/image?url=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F35f3a1_86dd45066ca34631be408c568291b713~mv2.png&w=640&q=75"
+      alt="Dra. Débora Malavazzi"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+    />
+    <div class="hero-image-placeholder" style="display:none; height:100%; align-items:center; justify-content:center; background:var(--cream); color:var(--muted); font-size:0.85rem;">
+      Foto da Dra. Débora
+    </div>
+    <div class="hero-image-overlay"></div>
+  </div>
+</section>
+
+<!-- TRATAMENTOS -->
+<section id="tratamentos">
+  <div class="reveal">
+    <p class="section-label">Especialidades</p>
+    <h2 class="section-title">O que posso fazer por você</h2>
+    <p class="section-sub">Tratamentos corporais e faciais personalizados, sem padrões estéticos impostos — o ideal para cada paciente.</p>
+  </div>
+  <div class="treatments-grid reveal">
+
+    <!-- CARD 1: Lipedema -->
+    <article class="treatment-card">
+      <div class="treatment-icon-wrap">
+        <!-- Ícone: silhueta corporal / circulação -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="5" r="2"/>
+          <path d="M12 7v5m0 0-3 4m3-4 3 4"/>
+          <path d="M7 13c0 3 2 5 5 6 3-1 5-3 5-6"/>
+        </svg>
+      </div>
+      <div class="treatment-body">
+        <h3 class="treatment-name">Lipedema</h3>
+        <p class="treatment-desc">
+          <!-- Edite aqui: breve descrição do tratamento de lipedema -->
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 2: Limpeza de Pele -->
+    <article class="treatment-card">
+      <div class="treatment-icon-wrap">
+        <!-- Ícone: rosto / pele -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="10" r="4"/>
+          <path d="M6 20a6 6 0 0 1 12 0"/>
+          <path d="M12 6V3m4.2 1.8-1.4 1.4M18 10h3M4.2 4.8l1.4 1.4M3 10h3"/>
+        </svg>
+      </div>
+      <div class="treatment-body">
+        <h3 class="treatment-name">Limpeza de Pele</h3>
+        <p class="treatment-desc">
+          <!-- Edite aqui: breve descrição da limpeza de pele -->
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 3: Harmonização Corporal -->
+    <article class="treatment-card">
+      <div class="treatment-icon-wrap">
+        <!-- Ícone: corpo / harmonização -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2c-2 0-4 2-4 5 0 2 1 3.5 2.5 4.5L9 21h6l-1.5-9.5C15 10.5 16 9 16 7c0-3-2-5-4-5z"/>
+          <path d="M9 21h6"/>
+        </svg>
+      </div>
+      <div class="treatment-body">
+        <h3 class="treatment-name">Harmonização Corporal</h3>
+        <p class="treatment-desc">
+          <!-- Edite aqui: breve descrição da harmonização corporal / microvasos -->
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 4: Outros Tratamentos -->
+    <article class="treatment-card">
+      <div class="treatment-icon-wrap">
+        <!-- Ícone: mais / portfólio -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+          <path d="M17.5 14v7M14 17.5h7"/>
+        </svg>
+      </div>
+      <div class="treatment-body">
+        <h3 class="treatment-name">Gordura Localizada</h3>
+        <p class="treatment-desc">
+          <!-- Edite aqui: breve descrição do portfólio completo / convite para consulta -->
+        </p>
+      </div>
+    </article>
+
+        <!-- CARD 5: Outros Tratamentos -->
+    <article class="treatment-card">
+      <div class="treatment-icon-wrap">
+        <!-- Ícone: mais / portfólio -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+          <path d="M17.5 14v7M14 17.5h7"/>
+        </svg>
+      </div>
+      <div class="treatment-body">
+        <h3 class="treatment-name">Outros Tratamentos</h3>
+        <p class="treatment-desc">
+          <!-- Edite aqui: breve descrição do portfólio completo / convite para consulta -->
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-image reveal">
+    <img
+      src="https://dradeboramalavazzi.wixsite.com/dradeboramalavazzi/_next/image?url=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F35f3a1_e52acac665224fda9c12f16a0168ff8f~mv2.jpg&w=640&q=75"
+      alt="Dra. Débora Malavazzi"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+    />
+    <div class="sobre-image-placeholder" style="display:none;">Foto da Dra.</div>
+    <div class="sobre-badge">
+      <div class="sobre-badge-num">6+</div>
+      <div class="sobre-badge-label">anos em estética</div>
+    </div>
+  </div>
+  <div class="reveal">
+    <p class="section-label">Quem sou eu</p>
+    <h2 class="section-title">Dra. Débora<br>Malavazzi</h2>
+    <p class="section-sub">
+      Graduada em Biomedicina há 20 anos, fui coordenadora de laboratório de saúde por 12 anos e docente em ensino superior por 2 anos. Hoje me dedico integralmente à estética humanizada.
+    </p>
+    <div class="sobre-stats">
+      <div class="stat-item">
+        <div class="stat-num">20</div>
+        <div class="stat-label">anos de Biomedicina</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">anos em laboratório</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">anos em estética</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">atendimento humanizado</div>
+      </div>
+    </div>
+    <a href="https://wa.me/5511912105115" target="_blank" rel="noopener" class="btn-primary">
+      Agendar uma consulta →
+    </a>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="reveal">
+    <p class="section-label">Experiências transformadas</p>
+    <h2 class="section-title">O que nossas pacientes dizem</h2>
+    <p class="section-sub">Resultados reais de pacientes reais. Cada história é única.</p>
+  </div>
+
+  <div class="testimonials-grid reveal">
+
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        <!-- Substitua pelo depoimento real da paciente -->
+        Atendimento incrível, me senti acolhida desde o primeiro contato. Os resultados superaram as minhas expectativas!
+      </p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-author">Paciente — Google Maps</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        A Dra. Débora é extremamente profissional e cuidadosa. Explicou cada etapa do tratamento com muita clareza.
+      </p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-author">Paciente — Google Maps</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text">
+        Tratamento de lipedema feito com muito conhecimento e empatia. Recomendo de olhos fechados a todas as mulheres!
+      </p>
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-author">Paciente — Google Maps</div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:40px;">
+    <a
+      href="https://www.google.com/maps/place/Cl%C3%ADnica+Est%C3%A9tica+Dra.+D%C3%A9bora+Malavazzi/@-23.5942448,-46.6097207,17z"
+      target="_blank"
+      rel="noopener"
+      class="google-badge"
+    >
+      <span>⭐</span>
+      <span class="rating">Ver todas as avaliações no Google</span>
+    </a>
+  </div>
+</section>
+
+<!-- REDES SOCIAIS -->
+<section id="redes">
+  <div class="reveal">
+    <p class="section-label">Redes sociais</p>
+    <h2 class="section-title">Acompanhe nas redes</h2>
+    <p class="section-sub" style="margin:0 auto 48px;">Dicas, resultados e novidades diretamente no seu feed.</p>
+  </div>
+
+  <div class="social-grid reveal">
+    <a href="https://www.instagram.com/dra_debora.malavazzi/" target="_blank" rel="noopener" class="social-card">
+      <div class="social-icon ig">IG</div>
+      <div class="social-info">
+        <div class="social-platform">Instagram</div>
+        <div class="social-handle">@dra_debora.malavazzi</div>
+      </div>
+    </a>
+    <a href="https://www.facebook.com/dradebora.malavazzi" target="_blank" rel="noopener" class="social-card">
+      <div class="social-icon fb">f</div>
+      <div class="social-info">
+        <div class="social-platform">Facebook</div>
+        <div class="social-handle">Dra Debora Malavazzi</div>
+      </div>
+    </a>
+    <a href="https://www.tiktok.com/@deboramalavazzi" target="_blank" rel="noopener" class="social-card">
+      <div class="social-icon tk">TK</div>
+      <div class="social-info">
+        <div class="social-platform">TikTok</div>
+        <div class="social-handle">@deboramalavazzi</div>
+      </div>
+    </a>
+    <a href="https://wa.me/5511912105115" target="_blank" rel="noopener" class="social-card">
+      <div class="social-icon wa">W</div>
+      <div class="social-info">
+        <div class="social-platform">WhatsApp</div>
+        <div class="social-handle">(11) 91210-5115</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="reveal">
+    <p class="section-label">Onde estamos</p>
+    <h2 class="section-title">Nossa clínica</h2>
+    <p class="section-sub">Região do Ipiranga, São Paulo — fácil acesso e estacionamento próximo.</p>
+  </div>
+
+  <div class="location-grid reveal">
+    <div class="map-embed">
+      <!--
+        COMO USAR O EMBED DO GOOGLE MAPS:
+        1. Acesse maps.google.com
+        2. Busque "Clínica Estética Dra. Débora Malavazzi"
+        3. Clique em "Compartilhar" → "Incorporar um mapa"
+        4. Copie o código <iframe> e cole aqui no lugar do placeholder abaixo
+      -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.0!2d-46.6071458!3d-23.5942448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bdb949288e1%3A0x88daa8fc6a57407!2sCl%C3%ADnica%20Est%C3%A9tica%20Dra.%20D%C3%A9bora%20Malavazzi!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização da Clínica Estética Dra. Débora Malavazzi"
+      ></iframe>
+    </div>
+
+    <div class="contact-box">
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:500; color:var(--dark); margin-bottom:20px;">Entre em contato</h3>
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Endereço</div>
+          <div class="contact-value">Rua Arcipreste de Andrade, 727<br>Sala 57 — Ipiranga, São Paulo</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Telefone / WhatsApp</div>
+          <div class="contact-value">
+            <a href="tel:+5511912105115">(11) 91210-5115</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">✉</div>
+        <div>
+          <div class="contact-label">E-mail</div>
+          <div class="contact-value">
+            <a href="mailto:debbybelladerm@gmail.com">debbybelladerm@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5511912105115?text=Olá%20Dra.%20Débora!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="cta-whatsapp">
+        💬 Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Dra. Débora Malavazzi</div>
+  <div class="footer-links">
+    <a href="#tratamentos">Tratamentos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="https://www.instagram.com/dra_debora.malavazzi/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/dradebora.malavazzi" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.tiktok.com/@deboramalavazzi" target="_blank" rel="noopener">TikTok</a>
+  </div>
+  <p class="footer-copy">© 2025 Dra. Débora Malavazzi · Clínica Estética · Ipiranga, São Paulo</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => io.observe(el));
+
+  // Hamburger (mobile)
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    const links = document.querySelector('.nav-links');
+    const cta = document.querySelector('.nav-cta');
+    const open = links.style.display === 'flex';
+    links.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:#fff;padding:20px 24px;gap:16px;border-bottom:1px solid var(--border);z-index:99;';
+    if (cta) cta.style.display = open ? 'none' : 'inline-flex';
+  });
+</script>
+</body>
+</html>
