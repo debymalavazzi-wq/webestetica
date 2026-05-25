@@ -237,6 +237,34 @@
   .treatments-category.active .treatment-card:nth-child(7) { animation-delay: 0.40s; }
   @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
 
+    /* Layout personalizado para corporais e faciais: 4 itens na primeira linha, 3 na segunda, centralizados */
+    #tab-corporal .treatments-grid,
+    #tab-facial .treatments-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    #tab-corporal .treatment-card,
+    #tab-facial .treatment-card {
+      flex: 0 1 22%;
+      max-width: 260px;
+    }
+
+    @media (max-width: 960px) {
+      #tab-corporal .treatments-grid,
+      #tab-facial .treatments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 20px;
+      }
+      #tab-corporal .treatment-card,
+      #tab-facial .treatment-card {
+        flex-basis: auto;
+        max-width: none;
+      }
+    }
+
   /* SOBRE */
   #sobre { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: center; }
   .sobre-image { position: relative; }
