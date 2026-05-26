@@ -88,7 +88,7 @@
 
   /* HERO */
   #hero {
-    min-height: 92vh; background: var(--cream);
+    min-height: 65vh; background: var(--cream);
     display: grid; grid-template-columns: 1fr 1fr;
     align-items: center; overflow: hidden; position: relative;
   }
@@ -99,14 +99,14 @@
     pointer-events: none;
   }
 
-  .hero-content { padding: 90px 64px 90px 88px; animation: fadeUp 0.9s ease both; position: relative; z-index: 1; }
+  .hero-content { padding: 45px 64px 90px 88px; animation: fadeUp 0.9s ease both; position: relative; z-index: 1; }
 
   .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--gold); margin-bottom: 18px;
   }
-  .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
+  .hero-eyebrow::before { display: none; }
 
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
